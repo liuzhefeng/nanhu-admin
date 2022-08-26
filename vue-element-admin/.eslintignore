@@ -1,0 +1,6 @@
+//主要作用是忽略哪些文件的语法检查
+
+build/*.js  //表示忽略build目录下类型为js的文件的语法检查
+src/assets
+public
+dist

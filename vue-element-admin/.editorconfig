@@ -1,0 +1,24 @@
+# https://editorconfig.org
+
+#表明是最顶层的配置文件
+root = true
+
+#对所有文件生效
+[*]
+#设置编码，值为latin1、utf-8、utf-8-bom、utf-16be和utf-16le，不建议使用utf-8-bom
+charset = utf-8
+#设置缩进风格(tab是硬缩进，space为软缩进)
+indent_style = space
+#用一个整数定义的列数来设置缩进的宽度
+#使用空格替代tab，并且一个tab会被替换为4个空格
+indent_size = 4
+#设置换行符，值为lf、cr和crlf
+end_of_line = lf
+#结尾插入新行
+insert_final_newline = true
+#设为true表示会去除结尾空格。
+trim_trailing_whitespace = true
+#对后缀名为 md 的文件生效
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false
