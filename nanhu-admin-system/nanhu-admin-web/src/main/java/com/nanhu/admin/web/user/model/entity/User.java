@@ -1,16 +1,14 @@
-package com.nanhu.admin.web.user.entity;
+package com.nanhu.admin.web.user.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.GrantedAuthority;
 
-import java.util.Collection;
 import java.util.Date;
 
 /**
@@ -40,9 +38,6 @@ public class User {
     private boolean isCredentialsNonExpired = true;
     //帐户是否可用(1 可用，0 删除用户)
     private boolean isEnabled = true;
-    //由于authorities不是数据库里面的字段，所以要排除他，不然mybatis-plus找不到该字段会报错
-    @TableField(exist = false)
-    Collection<? extends GrantedAuthority> authorities;
     //昵称
     private String nickName;
     //手机号

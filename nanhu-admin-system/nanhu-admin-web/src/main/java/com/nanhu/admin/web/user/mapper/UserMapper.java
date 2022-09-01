@@ -1,7 +1,7 @@
 package com.nanhu.admin.web.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.nanhu.admin.web.user.entity.User;
+import com.nanhu.admin.web.user.model.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
