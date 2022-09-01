@@ -1,6 +1,7 @@
 package com.nanhu.admin.config.security;
 
 import com.nanhu.admin.config.security.context.AuthenticationContextHolder;
+import com.nanhu.admin.exception.user.UserException;
 import com.nanhu.admin.exception.user.UserPasswordNotMatchException;
 import com.nanhu.admin.web.user.service.UserService;
 import lombok.SneakyThrows;
@@ -35,7 +36,7 @@ public class CustomerUserDetailsService implements UserDetailsService {
         //1.查询用户是否存在
         UserDetails user = userService.getUserByUserName(username);
         if (user == null) {
-            throw new UsernameNotFoundException("用户名或密码错误!");
+            throw new UserException("500", "用户名或密码错误!");
         }
         validate(user);
         //2.授权
